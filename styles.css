@@ -181,3 +181,4 @@ h2{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;line-height:1.2}
 .case.featured{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 40%,var(--line));background:linear-gradient(160deg,var(--glow),var(--card) 55%)}
 .repos{display:flex;gap:14px}
 @media (min-width:981px){.case.featured dl{grid-template-columns:1fr 1.6fr 1fr;gap:24px}.case.featured dl div{grid-template-columns:1fr;border:0;padding:0}}
+.case-sum{color:var(--text);font-size:15px;margin-top:-6px}.case-sum a{color:var(--accent)}
