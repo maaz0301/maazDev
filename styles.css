@@ -182,3 +182,8 @@ h2{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;line-height:1.2}
 .repos{display:flex;gap:14px}
 @media (min-width:981px){.case.featured dl{grid-template-columns:1fr 1.6fr 1fr;gap:24px}.case.featured dl div{grid-template-columns:1fr;border:0;padding:0}}
 .case-sum{color:var(--text);font-size:15px;margin-top:-6px}.case-sum a{color:var(--accent)}
+
+/* role line */
+.role{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 14px;font:500 13px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.role b{color:var(--accent-ink);background:linear-gradient(100deg,var(--accent),var(--accent-2));padding:5px 12px;border-radius:8px;letter-spacing:.08em}
+.role span{padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
