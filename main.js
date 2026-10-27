@@ -89,3 +89,34 @@
   }
   resize(); draw();
 })();
+
+// scroll progress, card spotlight, typed roles
+(function () {
+  var bar = document.getElementById('progress');
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  document.querySelectorAll('.card,.case,.mini').forEach(function (c) {
+    c.addEventListener('pointermove', function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  var el = document.getElementById('typed');
+  var words = ['REST APIs in Node.js and FastAPI', 'RAG pipelines on vector search', 'LLM agents with real tools', 'data models that scale'];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = words[0]; return; }
+  var w = 0, i = 0, del = false;
+  (function tick() {
+    var word = words[w];
+    el.textContent = word.slice(0, i);
+    if (!del && i === word.length) { del = true; return setTimeout(tick, 1600); }
+    if (del && i === 0) { del = false; w = (w + 1) % words.length; }
+    i += del ? -1 : 1;
+    setTimeout(tick, del ? 28 : 55);
+  })();
+})();
