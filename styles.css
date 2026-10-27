@@ -178,3 +178,6 @@ h2{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;line-height:1.2}
 .sec-head h2{position:relative}
 .sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);align-self:center}
 @media (prefers-reduced-motion:reduce){.orbs i,.track{animation:none}.caret{animation:none}}
+.case.featured{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 40%,var(--line));background:linear-gradient(160deg,var(--glow),var(--card) 55%)}
+.repos{display:flex;gap:14px}
+@media (min-width:981px){.case.featured dl{grid-template-columns:1fr 1.6fr 1fr;gap:24px}.case.featured dl div{grid-template-columns:1fr;border:0;padding:0}}

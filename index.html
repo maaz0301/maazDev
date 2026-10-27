@@ -123,7 +123,7 @@
       </article>
       <article class="card reveal">
         <h3>Infra &amp; integrations</h3>
-        <ul class="tags"><li>Docker</li><li>Git</li><li>Firebase</li><li>Twilio</li><li>Vercel</li></ul>
+        <ul class="tags"><li>Docker</li><li>Git</li><li>Firebase</li><li>Twilio</li><li>Vercel</li><li>Stripe</li></ul>
       </article>
       <article class="card reveal">
         <h3>Frontend</h3>
@@ -141,6 +141,19 @@
     <div class="sec-head reveal"><span class="sec-num">03</span><h2>Case studies</h2></div>
 
     <div class="cases">
+      <article class="case featured reveal">
+        <header>
+          <h3>Squadowl — athlete assessment &amp; team platform</h3>
+          <span class="repos"><a href="https://github.com/maaz0301/Squadowl-App" target="_blank" rel="noopener">App repo ↗</a><a href="https://github.com/maaz0301/Squadowl-web" target="_blank" rel="noopener">Web repo ↗</a></span>
+        </header>
+        <dl>
+          <div><dt>Problem</dt><dd>Sports organizations need one system for player evaluations, team registration and fees, and subscription billing across mobile and web.</dd></div>
+          <div><dt>Approach</dt><dd>A React Native app and a Next.js web app share one Supabase backend (Postgres with a versioned migration history). Business logic runs in Deno edge functions: Stripe subscriptions and Stripe Connect registration payments with webhook handling, AI-generated player insights, email and push notifications, and video storage management.</dd></div>
+          <div><dt>Outcome</dt><dd>Mobile and web clients built end to end on a shared backend, with payments, notifications and AI features wired in. Source is public on GitHub.</dd></div>
+        </dl>
+        <ul class="tags"><li>React Native</li><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Deno edge functions</li><li>Stripe Connect</li><li>TanStack Query</li><li>LLM insights</li></ul>
+      </article>
+
       <article class="case reveal">
         <header>
           <h3>RAVER-AI</h3>
