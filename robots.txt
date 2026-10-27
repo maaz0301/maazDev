@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://protfilio-olive.vercel.app/sitemap.xml
